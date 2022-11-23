@@ -5,3 +5,10 @@ resources:
   - ../../base
 patches:
   - path: application.patch.yml
+  - target:
+      kind: Application
+      name: .*
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: nest-app-dev

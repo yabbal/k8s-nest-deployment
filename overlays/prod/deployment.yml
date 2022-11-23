@@ -5,11 +5,3 @@ metadata:
   namespace: nest-app
 spec:
   replicas: 5
-  template:
-    metadata:
-      labels:
-        app: nest-app
-    spec:
-      containers:
-        - name: nest-app
-          image: yabbal/k8s-nest-app:0.1.3
