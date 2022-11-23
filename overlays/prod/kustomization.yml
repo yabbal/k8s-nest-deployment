@@ -4,7 +4,7 @@ namespace: nest-app
 resources:
   - ../../base
 patchesStrategicMerge:
-  - deployment.yml
+  - deployment.patch.yml
 patches:
   - target:
       kind: Deployment
