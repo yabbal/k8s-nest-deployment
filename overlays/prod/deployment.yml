@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nest-app-deployment
+  namespace: nest-app
+spec:
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: nest-app
+    spec:
+      containers:
+        - name: nest-app
+          image: yabbal/k8s-nest-app:0.1.3

@@ -3,13 +3,8 @@ kind: Deployment
 metadata:
   name: nest-app-deployment
   namespace: nest-app
-  labels:
-    app: nest-app
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      app: nest-app
   template:
     metadata:
       labels:
@@ -18,5 +13,3 @@ spec:
       containers:
         - name: nest-app
           image: yabbal/k8s-nest-app:0.1.4
-          ports:
-            - containerPort: 3000

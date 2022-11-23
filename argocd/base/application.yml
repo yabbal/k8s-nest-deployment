@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/yabbal/k8s-nest-deployment.git
     targetRevision: HEAD
-    path: dev
+    path: ---------------
   destination:
     server: https://kubernetes.default.svc
     namespace: nest-app
