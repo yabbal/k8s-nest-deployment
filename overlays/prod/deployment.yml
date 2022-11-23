@@ -16,7 +16,7 @@ spec:
         app: nest-app-prod
     spec:
       containers:
-        - name: nest-app-dev
+        - name: nest-app-prod
           image: yabbal/k8s-nest-app:0.1.3
           ports:
             - containerPort: 3000
