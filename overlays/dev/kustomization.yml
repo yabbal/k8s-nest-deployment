@@ -5,6 +5,7 @@ resources:
   - ../../base
 patchesStrategicMerge:
   - deployment.patch.yml
+  - service.patch.yml
 patches:
   - target:
       kind: Deployment
