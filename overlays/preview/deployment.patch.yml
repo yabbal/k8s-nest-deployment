@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: nest-app-preview
-          image: yabbal/k8s-nest-app:latest
+          image: yabbal/k8s-nest-app:pr-5
           ports:
             - containerPort: 3000
