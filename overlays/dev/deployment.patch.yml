@@ -14,3 +14,9 @@ spec:
     metadata:
       labels:
         app: nest-app-dev
+    spec:
+      containers:
+        - name: nest-app-dev
+          image: yabbal/k8s-nest-app:0.1.4
+          ports:
+            - containerPort: 3000

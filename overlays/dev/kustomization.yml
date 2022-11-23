@@ -5,13 +5,9 @@ resources:
   - ../../base
 patchesStrategicMerge:
   - deployment.patch.yml
-images:
-  - name: yabbal/k8s-nest-app
-    newName: yabbal/k8s-nest-app
-    newTag: 0.1.4
 patches:
   - target:
-      kind: Application
+      kind: Deployment
       name: .*
     patch: |-
       - op: replace

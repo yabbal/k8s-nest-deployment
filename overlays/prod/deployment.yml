@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nest-app-prod
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: nest-app-prod
@@ -14,3 +14,9 @@ spec:
     metadata:
       labels:
         app: nest-app-prod
+    spec:
+      containers:
+        - name: nest-app-dev
+          image: yabbal/k8s-nest-app:0.1.3
+          ports:
+            - containerPort: 3000
