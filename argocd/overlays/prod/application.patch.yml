@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nest-app-application-prod
+  name: nest-app-application
   namespace: argocd
 spec:
   source:
