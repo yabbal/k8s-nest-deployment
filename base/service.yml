@@ -5,5 +5,3 @@ metadata:
   namespace: nest-app
 spec:
   type: NodePort
-  selector:
-    app: nest-app

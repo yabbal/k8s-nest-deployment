@@ -4,6 +4,8 @@ metadata:
   name: nest-app-service
   namespace: nest-app
 spec:
+  selector:
+    app: nest-app-prod
   ports:
     - protocol: TCP
       port: 3000
