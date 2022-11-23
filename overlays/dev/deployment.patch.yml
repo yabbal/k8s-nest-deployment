@@ -4,13 +4,13 @@ metadata:
   name: nest-app
   namespace: nest-app
   labels:
-    app: nest-app-prod
+    app: nest-app-dev
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nest-app-prod
+      app: nest-app-dev
   template:
     metadata:
       labels:
-        app: nest-app-prod
+        app: nest-app-dev

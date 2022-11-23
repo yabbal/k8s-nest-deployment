@@ -1,7 +1,0 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nest-app-deployment
-  namespace: nest-app
-spec:
-  replicas: 3
