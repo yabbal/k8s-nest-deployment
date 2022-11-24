@@ -22,14 +22,14 @@ spec:
     spec:
       source:
         repoURL: "https://github.com/yabbal/k8s-nest-deployment"
-        targetRevision: "{{branch}}"
+        targetRevision: "pr-{{number}}"
         path: overlays/preview
         kustomize:
-          nameSuffix: "{{branch}}"
+          nameSuffix: "pr-{{number}}"
           commonLabels:
             app.kubernetes.io/instance: "{{branch}}-{{number}}"
           images:
-            - yabbal/k8s-nest-app:{{branch}}
+            - yabbal/k8s-nest-app:pr-{{number}}
       project: "default"
       destination:
         server: https://kubernetes.default.svc
