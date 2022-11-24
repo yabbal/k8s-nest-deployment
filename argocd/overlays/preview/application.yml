@@ -30,6 +30,7 @@ spec:
             app.kubernetes.io/instance: "{{branch}}-{{number}}"
           images:
             - yabbal/k8s-nest-app:pr-{{number}}
+      project: "default"
       destination:
         server: https://kubernetes.default.svc
         namespace: nest-app-{{branch}}-{{number}}
