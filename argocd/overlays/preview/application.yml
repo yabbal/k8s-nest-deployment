@@ -21,7 +21,7 @@ spec:
       namespace: argocd
     spec:
       source:
-        repoURL: "https://github.com/yabbal/k8s-nest-deployment"
+        repoURL: "https://github.com/yabbal/k8s-nest-app"
         targetRevision: "{{head_sha}}"
         path: overlays/preview
         kustomize:
