@@ -22,7 +22,7 @@ spec:
     spec:
       source:
         repoURL: "https://github.com/yabbal/k8s-nest-deployment"
-        targetRevision: "pr-{{number}}"
+        targetRevision: "{{head_sha}}"
         path: overlays/preview
         kustomize:
           nameSuffix: "pr-{{number}}"
