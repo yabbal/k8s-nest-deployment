@@ -21,7 +21,7 @@ spec:
       namespace: argocd
     spec:
       source:
-        repoURL: "https://github.com/yabbal/k8s-nest-app"
+        repoURL: "https://github.com/yabbal/k8s-nest-deployment"
         targetRevision: "{{head_sha}}"
         path: overlays/preview
         kustomize:
@@ -30,7 +30,6 @@ spec:
             app.kubernetes.io/instance: "{{branch}}-{{number}}"
           images:
             - yabbal/k8s-nest-app:pr-{{number}}
-      project: "default"
       destination:
         server: https://kubernetes.default.svc
         namespace: nest-app-{{branch}}-{{number}}
