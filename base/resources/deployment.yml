@@ -15,5 +15,7 @@ spec:
     metadata:
       labels:
         app: nest-app
+    spec:
       containers:
-        - image: yabbal/k8s-nest-app:version
+        - name: nest-app
+          image: yabbal/k8s-nest-app:version
