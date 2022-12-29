@@ -14,8 +14,9 @@ jobs:
 
       - name: Setup Kustomize
         uses: multani/action-setup-kustomize@v1
-        with:
-          version: 4.5.7
+
+      - name: Check kustmize version
+        run: kustomize version
 
       - name: Check argo conf
         run: kustomize build argocd/overlays/${{ matrix.env }}
