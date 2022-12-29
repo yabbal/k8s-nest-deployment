@@ -5,4 +5,4 @@ resources:
   - ../../base
 
 patches:
-  - path: application.patch.yaml
+  - path: application.patch.yml

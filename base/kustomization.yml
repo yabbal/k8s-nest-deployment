@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - resources/deployment.yml
   - resources/service.yml
-  - resources/hpa.yaml
+  - resources/hpa.yml
 namespace: nest
