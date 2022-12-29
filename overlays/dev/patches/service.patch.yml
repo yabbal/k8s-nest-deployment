@@ -6,9 +6,5 @@ metadata:
   name: nest-app
   namespace: nest
 spec:
-  ports:
-    - name: nest-app-dev
-      port: 80
-      targetPort: 8080
   selector:
     app: nest-app-dev
