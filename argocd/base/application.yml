@@ -7,7 +7,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: nest
-  project: nest-app
+  project: default
   source:
     path: ---------------
     repoURL: https://github.com/yabbal/k8s-nest-deployment.git
