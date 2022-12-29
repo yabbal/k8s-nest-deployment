@@ -19,3 +19,6 @@ spec:
       containers:
         - name: nest-app
           image: nest-app:version
+          ports:
+            - name: nest-app-port
+              containerPort: 8080
