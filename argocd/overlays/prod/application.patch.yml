@@ -5,5 +5,5 @@ metadata:
   namespace: argocd
 spec:
   source:
-    targetRevision: main
     path: overlays/prod
+    targetRevision: main
