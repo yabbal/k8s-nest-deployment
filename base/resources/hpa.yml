@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: nest-app
+  name: nest-app-hpa
   namespace: nest
 spec:
   minReplicas: 1
