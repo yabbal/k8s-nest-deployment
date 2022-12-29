@@ -1,23 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: nest-app
+namespace: nest
+nameSuffix: -dev
+images:
+  - name: nest-app
+    newName: yabbal/k8s-nest-app
+    newTag: develop
 resources:
   - ../../base
 patchesStrategicMerge:
-  - deployment.patch.yml
-  - service.patch.yml
-patches:
-  - target:
-      kind: Deployment
-      name: .*
-    patch: |-
-      - op: replace
-        path: /metadata/name
-        value: nest-app-dev
-  - target:
-      kind: Service
-      name: .*
-    patch: |-
-      - op: replace
-        path: /metadata/name
-        value: nest-app-service-dev
+  - patches/deployment.patch.yml
+  - patches/service.patch.yml
+generatorOptions:
+  disableNameSuffixHash: true

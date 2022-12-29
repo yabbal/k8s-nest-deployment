@@ -1,14 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: argocd
+
 resources:
   - ../../base
+
 patches:
-  - path: application.patch.yml
-  - target:
-      kind: Application
-      name: .*
-    patch: |-
-      - op: replace
-        path: /metadata/name
-        value: nest-app-prod
+  - path: application.patch.yaml
