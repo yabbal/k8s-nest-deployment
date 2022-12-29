@@ -13,11 +13,11 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: nest-app-preview
+        value: nest-app-prod
   - target:
       kind: Service
       name: .*
     patch: |-
       - op: replace
         path: /metadata/name
-        value: nest-app-service-preview
+        value: nest-app-service-prod

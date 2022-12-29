@@ -1,12 +1,11 @@
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
-  name: nest-app
-  namespace: nest-app
   labels:
     app: nest-app-dev
+  name: nest-app
+  namespace: nest
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: nest-app-dev
@@ -16,7 +15,5 @@ spec:
         app: nest-app-dev
     spec:
       containers:
-        - name: nest-app-dev
-          image: yabbal/k8s-nest-app:latest
-          ports:
-            - containerPort: 3000
+        - name: nest-app
+          image: nest-app-dev:version

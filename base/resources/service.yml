@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nest-app
+  name: nest-app
+  namespace: nest
+spec:
+  ports:
+    - name: nest-app
+      port: 80
+      targetPort: 8080
+  selector:
+    app: nest-app
+    version: baseline

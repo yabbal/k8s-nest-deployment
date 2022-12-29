@@ -1,0 +1,22 @@
+name: Configuration check
+on:
+  push:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        env: [dev, prod]
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup Kustomize
+        uses: imranismail/setup-kustomize@v2
+
+      - name: Check argo conf
+        run: kustomize build argocd/overlays/${{ matrix.env }}
+
+      - name: Check conf
+        run: kustomize build overlays/${{ matrix.env }}

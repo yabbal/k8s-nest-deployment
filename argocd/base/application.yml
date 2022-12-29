@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nest-app-application
+  name: nest-app
   namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/yabbal/k8s-nest-deployment.git
-    targetRevision: HEAD
-    path: ---------------
   destination:
     server: https://kubernetes.default.svc
-    namespace: nest-app
+    namespace: nest
+  project: nest-app
+  source:
+    path: ---------------
+    repoURL: https://github.com/yabbal/k8s-nest-deployment.git
+    targetRevision: main
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
