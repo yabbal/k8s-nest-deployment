@@ -13,7 +13,3 @@ spec:
     metadata:
       labels:
         app: nest-app-dev
-    spec:
-      containers:
-        - name: nest-app
-          image: nest-app-dev:version
