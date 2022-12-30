@@ -3,13 +3,13 @@ kind: Kustomization
 namespace: nest
 nameSuffix: -dev
 images:
-  - name: nest-app
-    newName: yabbal/k8s-nest-app
-    newTag: develop
+- name: nest-app
+  newName: '*:yabbal/k8s-nest-app'
+  newTag: sha-35f1754
 resources:
-  - ../../base
+- ../../base
 patchesStrategicMerge:
-  - patches/deployment.patch.yml
-  - patches/service.patch.yml
+- patches/deployment.patch.yml
+- patches/service.patch.yml
 generatorOptions:
   disableNameSuffixHash: true
