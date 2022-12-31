@@ -2,15 +2,17 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: nest
 replicas:
-  - count: 3
-    name: nest-app
+- count: 3
+  name: nest-app
 images:
-  - name: nest-app
-    newName: yabbal/k8s-nest-app
-    newTag: main
+- name: nest-app
+  newName: |-
+    yabbal/k8s-nest-app:0.2.2
+    yabbal/k8s-nest-app:0.2
+    yabbal/k8s-nest-app:latest
 resources:
-  - ../../base
+- ../../base
 patchesStrategicMerge:
-  - patches/hpa.patch.yml
+- patches/hpa.patch.yml
 generatorOptions:
   disableNameSuffixHash: true
