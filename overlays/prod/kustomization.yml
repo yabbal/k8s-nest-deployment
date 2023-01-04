@@ -7,7 +7,7 @@ replicas:
 images:
 - name: nest-app
   newName: |-
-    yabbal/k8s-nest-app:0.3.1
+    yabbal/k8s-nest-app:0.3.2
     yabbal/k8s-nest-app:latest
 resources:
 - ../../base
