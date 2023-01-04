@@ -4,7 +4,8 @@ namespace: nest
 nameSuffix: -dev
 images:
 - name: nest-app
-  newName: sha-a0c40ea
+  newName: yabbal/k8s-nest-app
+  newTag: sha-4c11fa2
 resources:
 - ../../base
 patchesStrategicMerge:
