@@ -6,7 +6,8 @@ replicas:
   name: nest-app
 images:
 - name: nest-app
-  newName: 0.3.5
+  newName: yabbal/k8s-nest-app
+  newTag: 0.3.6
 resources:
 - ../../base
 patchesStrategicMerge:
