@@ -6,7 +6,7 @@ replicas:
   name: nest-app
 images:
 - name: nest-app
-  newName: 0.3.4
+  newName: 0.3.5
 resources:
 - ../../base
 patchesStrategicMerge:
