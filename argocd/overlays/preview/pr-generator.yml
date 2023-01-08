@@ -23,7 +23,7 @@ spec:
         kustomize:
           nameSuffix: "-pr-{{number}}"
           images:
-            - yabbal/k8s-nest-app:pr-{{number}}
+            - yabbal/k8s-nest-app:{{head_sha}}
       project: "default"
       destination:
         server: https://kubernetes.default.svc
