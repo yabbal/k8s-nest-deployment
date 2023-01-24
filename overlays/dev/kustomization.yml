@@ -5,7 +5,7 @@ nameSuffix: -dev
 images:
 - name: nest-app
   newName: yabbal/k8s-nest-app
-  newTag: 5094441fb063d9612775d1704dcab0812da820fa
+  newTag: 05a54a2dd074c52a76ad9f10ae4d64355cee3e79
 resources:
 - ../../base
 patchesStrategicMerge:
